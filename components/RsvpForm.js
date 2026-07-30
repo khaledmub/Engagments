@@ -51,17 +51,21 @@ export default function RsvpForm() {
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="confirm show"
-        style={{ marginTop: "1rem" }}
+        className="success-state"
       >
-        <p style={{ marginBottom: "1rem", fontFamily: "var(--font-serif)", fontSize: "18px" }}>
-          Thank you, {formData.name}! We&apos;ve noted your RSVP.
+        <p style={{ marginBottom: "1rem", fontFamily: "var(--font-serif)", fontSize: "1.4rem", color: "var(--navy-deep)" }}>
+          Thank you, {formData.name}!
         </p>
-        <div style={{ padding: "0.5rem", borderRadius: "8px", display: "inline-block", background: "rgba(255,255,255,0.5)" }}>
-          <p style={{ fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "1px" }}>Your Entry Number</p>
-          <p style={{ fontSize: "2rem", fontWeight: "bold", fontFamily: "var(--font-serif)" }}>{entryNumber}</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", color: "var(--text-light)" }}>
+          We&apos;ve securely recorded your RSVP.
+        </p>
+        <div className="entry-badge">
+          <p style={{ fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "1px", color: "var(--navy)", marginBottom: "0.2rem" }}>Entry Code</p>
+          <p style={{ fontSize: "2.5rem", fontWeight: "bold", fontFamily: "var(--font-display)", color: "var(--navy-deep)" }}>{entryNumber}</p>
         </div>
-        <p style={{ fontSize: "0.85rem", marginTop: "1rem", opacity: 0.8 }}>We&apos;ve sent a confirmation SMS to {formData.phone}</p>
+        <p style={{ fontSize: "0.9rem", marginTop: "1rem", color: "var(--text-light)" }}>
+          A confirmation SMS has been sent to {formData.phone}
+        </p>
       </motion.div>
     );
   }

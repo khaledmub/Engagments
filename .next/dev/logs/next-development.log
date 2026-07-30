@@ -3,3 +3,6 @@
 {"timestamp":"00:00:02.004","source":"Browser","level":"ERROR","message":"Invalid DOM property `class`. Did you mean `className`? \"\\n    at Set.forEach (<anonymous>)\" \"(<anonymous>)\""}
 {"timestamp":"00:00:02.648","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
 {"timestamp":"00:00:02.951","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"02:03:51.242","source":"Server","level":"LOG","message":"✓ Compiled in 396ms"}
+{"timestamp":"02:04:02.308","source":"Server","level":"LOG","message":"✓ Compiled in 82ms"}
+{"timestamp":"02:04:13.907","source":"Server","level":"LOG","message":"✓ Compiled in 14ms"}

@@ -5,43 +5,42 @@ import RsvpForm from "@/components/RsvpForm";
 
 export default function Home() {
   return (
-    <div className="scene">
-      
-      {/* Spacer to keep the initial view clear so the background image can be fully seen */}
-      <div style={{ height: "90vh", width: "100%" }}></div>
-      
-      <motion.div 
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.8 }}
-        style={{ 
-          width: "100%",
-          padding: "2rem 1.5rem",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginBottom: "4rem"
-        }}
-      >
-        <div 
-          style={{ 
-            width: "100%", 
-            maxWidth: "400px", 
-            background: "var(--card-bg)", 
-            backdropFilter: "blur(12px)", 
-            WebkitBackdropFilter: "blur(12px)", 
-            padding: "2.5rem 2rem", 
-            borderRadius: "24px",
-            boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
-          }}
+    <main className="split-layout">
+      {/* Left/Top Side: Hero Text over the Background Image */}
+      <div className="layout-left">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="panel-title" style={{ textAlign: "center", marginBottom: "0.5rem" }}>RSVP</div>
-          <div className="panel-sub" style={{ textAlign: "center", marginBottom: "2rem" }}>Kindly confirm your attendance below</div>
+          <h1 className="hero-title">You&apos;re Invited</h1>
+          <p className="hero-subtitle">
+            Join us in celebrating this special milestone. 
+            We look forward to sharing our joy with you.
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Right/Bottom Side: Frosted Glass Form Container */}
+      <div className="layout-right">
+        <motion.div 
+          className="glass-card"
+          initial={{ opacity: 0, scale: 0.95, x: 20 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        >
+          <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", color: "var(--navy-deep)", marginBottom: "0.5rem" }}>
+              RSVP
+            </h2>
+            <p style={{ color: "var(--text-light)", fontFamily: "var(--font-sans)", fontSize: "0.95rem" }}>
+              Kindly confirm your attendance below
+            </p>
+          </div>
+          
           <RsvpForm />
-        </div>
-      </motion.div>
-      
-    </div>
+        </motion.div>
+      </div>
+    </main>
   );
 }

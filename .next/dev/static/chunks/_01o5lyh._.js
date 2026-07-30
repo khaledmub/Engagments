@@ -64,78 +64,86 @@ function RsvpForm() {
                 opacity: 1,
                 scale: 1
             },
-            className: "confirm show",
-            style: {
-                marginTop: "1rem"
-            },
+            className: "success-state",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     style: {
                         marginBottom: "1rem",
                         fontFamily: "var(--font-serif)",
-                        fontSize: "18px"
+                        fontSize: "1.4rem",
+                        color: "var(--navy-deep)"
                     },
                     children: [
                         "Thank you, ",
                         formData.name,
-                        "! We've noted your RSVP."
+                        "!"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/RsvpForm.js",
-                    lineNumber: 57,
+                    lineNumber: 56,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    style: {
+                        fontFamily: "var(--font-sans)",
+                        fontSize: "1rem",
+                        color: "var(--text-light)"
+                    },
+                    children: "We've securely recorded your RSVP."
+                }, void 0, false, {
+                    fileName: "[project]/components/RsvpForm.js",
+                    lineNumber: 59,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    style: {
-                        padding: "0.5rem",
-                        borderRadius: "8px",
-                        display: "inline-block",
-                        background: "rgba(255,255,255,0.5)"
-                    },
+                    className: "entry-badge",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             style: {
                                 fontSize: "0.8rem",
                                 textTransform: "uppercase",
-                                letterSpacing: "1px"
+                                letterSpacing: "1px",
+                                color: "var(--navy)",
+                                marginBottom: "0.2rem"
                             },
-                            children: "Your Entry Number"
+                            children: "Entry Code"
                         }, void 0, false, {
                             fileName: "[project]/components/RsvpForm.js",
-                            lineNumber: 61,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             style: {
-                                fontSize: "2rem",
+                                fontSize: "2.5rem",
                                 fontWeight: "bold",
-                                fontFamily: "var(--font-serif)"
+                                fontFamily: "var(--font-display)",
+                                color: "var(--navy-deep)"
                             },
                             children: entryNumber
                         }, void 0, false, {
                             fileName: "[project]/components/RsvpForm.js",
-                            lineNumber: 62,
+                            lineNumber: 64,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/RsvpForm.js",
-                    lineNumber: 60,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     style: {
-                        fontSize: "0.85rem",
+                        fontSize: "0.9rem",
                         marginTop: "1rem",
-                        opacity: 0.8
+                        color: "var(--text-light)"
                     },
                     children: [
-                        "We've sent a confirmation SMS to ",
+                        "A confirmation SMS has been sent to ",
                         formData.phone
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/RsvpForm.js",
-                    lineNumber: 64,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, this)
             ]
@@ -168,7 +176,7 @@ function RsvpForm() {
                         children: "Name"
                     }, void 0, false, {
                         fileName: "[project]/components/RsvpForm.js",
-                        lineNumber: 77,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -181,13 +189,13 @@ function RsvpForm() {
                         onChange: handleChange
                     }, void 0, false, {
                         fileName: "[project]/components/RsvpForm.js",
-                        lineNumber: 78,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/RsvpForm.js",
-                lineNumber: 76,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -198,7 +206,7 @@ function RsvpForm() {
                         children: "Phone Number"
                     }, void 0, false, {
                         fileName: "[project]/components/RsvpForm.js",
-                        lineNumber: 90,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -213,13 +221,13 @@ function RsvpForm() {
                         onChange: handleChange
                     }, void 0, false, {
                         fileName: "[project]/components/RsvpForm.js",
-                        lineNumber: 91,
+                        lineNumber: 95,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/RsvpForm.js",
-                lineNumber: 89,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -230,7 +238,7 @@ function RsvpForm() {
                         children: "Number of Companions"
                     }, void 0, false, {
                         fileName: "[project]/components/RsvpForm.js",
-                        lineNumber: 105,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -245,20 +253,20 @@ function RsvpForm() {
                         onChange: handleChange
                     }, void 0, false, {
                         fileName: "[project]/components/RsvpForm.js",
-                        lineNumber: 106,
+                        lineNumber: 110,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
                         children: "Excluding you"
                     }, void 0, false, {
                         fileName: "[project]/components/RsvpForm.js",
-                        lineNumber: 117,
+                        lineNumber: 121,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/RsvpForm.js",
-                lineNumber: 104,
+                lineNumber: 108,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -268,7 +276,7 @@ function RsvpForm() {
                 children: status === "submitting" ? "CONFIRMING..." : "CONFIRM ATTENDANCE"
             }, void 0, false, {
                 fileName: "[project]/components/RsvpForm.js",
-                lineNumber: 120,
+                lineNumber: 124,
                 columnNumber: 7
             }, this),
             status === "error" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -281,13 +289,13 @@ function RsvpForm() {
                 children: "Something went wrong. Please try again."
             }, void 0, false, {
                 fileName: "[project]/components/RsvpForm.js",
-                lineNumber: 129,
+                lineNumber: 133,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/RsvpForm.js",
-        lineNumber: 70,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 }
@@ -314,77 +322,107 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RsvpForm$2e$js
 ;
 ;
 function Home() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "scene",
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+        className: "split-layout",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                style: {
-                    height: "90vh",
-                    width: "100%"
-                }
+                className: "layout-left",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                    initial: {
+                        opacity: 0,
+                        y: 30
+                    },
+                    animate: {
+                        opacity: 1,
+                        y: 0
+                    },
+                    transition: {
+                        duration: 1,
+                        ease: "easeOut"
+                    },
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                            className: "hero-title",
+                            children: "You're Invited"
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.js",
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "hero-subtitle",
+                            children: "Join us in celebrating this special milestone. We look forward to sharing our joy with you."
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.js",
+                            lineNumber: 17,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/app/page.js",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.js",
-                lineNumber: 11,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                initial: {
-                    opacity: 0,
-                    y: 50
-                },
-                whileInView: {
-                    opacity: 1,
-                    y: 0
-                },
-                viewport: {
-                    once: true,
-                    margin: "-50px"
-                },
-                transition: {
-                    duration: 0.8
-                },
-                style: {
-                    width: "100%",
-                    padding: "2rem 1.5rem",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    marginBottom: "4rem"
-                },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    style: {
-                        width: "100%",
-                        maxWidth: "400px",
-                        background: "var(--card-bg)",
-                        backdropFilter: "blur(12px)",
-                        WebkitBackdropFilter: "blur(12px)",
-                        padding: "2.5rem 2rem",
-                        borderRadius: "24px",
-                        boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "layout-right",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                    className: "glass-card",
+                    initial: {
+                        opacity: 0,
+                        scale: 0.95,
+                        x: 20
+                    },
+                    animate: {
+                        opacity: 1,
+                        scale: 1,
+                        x: 0
+                    },
+                    transition: {
+                        duration: 0.8,
+                        delay: 0.2,
+                        ease: "easeOut"
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "panel-title",
-                            style: {
-                                textAlign: "center",
-                                marginBottom: "0.5rem"
-                            },
-                            children: "RSVP"
-                        }, void 0, false, {
-                            fileName: "[project]/app/page.js",
-                            lineNumber: 39,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "panel-sub",
                             style: {
                                 textAlign: "center",
                                 marginBottom: "2rem"
                             },
-                            children: "Kindly confirm your attendance below"
-                        }, void 0, false, {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    style: {
+                                        fontFamily: "var(--font-display)",
+                                        fontSize: "1.8rem",
+                                        color: "var(--navy-deep)",
+                                        marginBottom: "0.5rem"
+                                    },
+                                    children: "RSVP"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/page.js",
+                                    lineNumber: 33,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    style: {
+                                        color: "var(--text-light)",
+                                        fontFamily: "var(--font-sans)",
+                                        fontSize: "0.95rem"
+                                    },
+                                    children: "Kindly confirm your attendance below"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/page.js",
+                                    lineNumber: 36,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/app/page.js",
-                            lineNumber: 40,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$RsvpForm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
@@ -395,12 +433,12 @@ function Home() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.js",
-                    lineNumber: 27,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.js",
-                lineNumber: 13,
+                lineNumber: 25,
                 columnNumber: 7
             }, this)
         ]
