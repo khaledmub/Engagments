@@ -1,12 +1,8 @@
 import { makeWASocket, useMultiFileAuthState, DisconnectReason } from '@whiskeysockets/baileys';
 import qrcode from 'qrcode-terminal';
-import { PrismaClient } from "@prisma/client";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import pino from 'pino';
-
-// Initialize Prisma
-const adapter = new PrismaBetterSqlite3({ url: "file:./dev.db" });
-const prisma = new PrismaClient({ adapter });
+const API_URL = 'https://mubreq.sa/amr-yassmin/api/bot_sync.php';
+const API_SECRET = 'hostinger-bot-sync-token-9988';
 
 let pollingStarted = false;
 let isProcessing = false; // Lock to prevent overlapping polls
@@ -67,9 +63,15 @@ async function checkDatabaseAndSendMessages() {
     isProcessing = true;
     
     try {
-        const pendingGuests = await prisma.guest.findMany({
-            where: { messageSent: false }
-        });
+        const res = await fetch(`${API_URL}?action=get_pending&token=${API_SECRET}`);
+        if (!res.ok) {
+            console.error("Failed to fetch from PHP API");
+            isProcessing = false;
+            return;
+        }
+        
+        const data = await res.json();
+        const pendingGuests = data.pendingGuests || [];
 
         if (pendingGuests.length === 0) {
             isProcessing = false;
@@ -89,7 +91,11 @@ async function checkDatabaseAndSendMessages() {
             // Skip invalid numbers
             if (cleanPhone.length < 10) {
                 console.log(`⏭️  Skipping ${guest.name} — invalid phone "${guest.phone}"`);
-                await prisma.guest.update({ where: { id: guest.id }, data: { messageSent: true } });
+                await fetch(`${API_URL}?action=mark_sent&token=${API_SECRET}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: guest.id })
+                });
                 continue;
             }
 
@@ -111,7 +117,11 @@ async function checkDatabaseAndSendMessages() {
                 const timeout = new Promise((_, rej) => setTimeout(() => rej(new Error('Timed out (15s)')), 15000));
                 await Promise.race([sendPromise, timeout]);
                 
-                await prisma.guest.update({ where: { id: guest.id }, data: { messageSent: true } });
+                await fetch(`${API_URL}?action=mark_sent&token=${API_SECRET}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: guest.id })
+                });
                 console.log(`✅ Sent to ${guest.name}!`);
             } catch (err) {
                 console.error(`❌ Failed: ${guest.name} — ${err.message}`);
