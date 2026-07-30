@@ -15,9 +15,33 @@ if ($token !== $SECRET) {
 }
 
 try {
-    $dbPath = __DIR__ . '/../../dev.db';
+    $possiblePaths = [
+        __DIR__ . '/../dev.db',            // If inside amr-yassmin/api
+        __DIR__ . '/../../dev.db',         // If inside public_html/api
+        __DIR__ . '/../../../dev.db'       // If inside amr-yassmin/out/api
+    ];
+    $dbPath = '';
+    foreach ($possiblePaths as $path) {
+        if (file_exists($path)) {
+            $dbPath = $path;
+            break;
+        }
+    }
+    if (!$dbPath) { $dbPath = __DIR__ . '/../dev.db'; } // Fallback to create it in the parent folder
+
     $db = new PDO("sqlite:" . $dbPath);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Create table if it doesn't exist to prevent errors if dev.db is empty
+    $db->exec('CREATE TABLE IF NOT EXISTS Guest (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        phone TEXT NOT NULL,
+        companions INTEGER DEFAULT 0,
+        entryNumber TEXT UNIQUE NOT NULL,
+        messageSent BOOLEAN DEFAULT 0,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
+    )');
 
     if ($action === 'get_pending') {
         // Fetch guests who haven't received a message yet
