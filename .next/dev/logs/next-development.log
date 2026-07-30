@@ -1,23 +1,5 @@
-{"timestamp":"00:00:01.308","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:08.335","source":"Server","level":"LOG","message":"○ Compiling / ..."}
-{"timestamp":"00:00:12.711","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:46:57.032","source":"Server","level":"LOG","message":"✓ Compiled in 171ms"}
-{"timestamp":"00:47:15.363","source":"Server","level":"LOG","message":"✓ Compiled in 68ms"}
-{"timestamp":"00:47:16.256","source":"Browser","level":"ERROR","message":"Invalid DOM property `%s`. Did you mean `%s`? class className"}
-{"timestamp":"00:47:27.968","source":"Server","level":"LOG","message":"✓ Compiled in 8ms"}
-{"timestamp":"00:47:44.886","source":"Server","level":"LOG","message":"✓ Compiled in 32ms"}
-{"timestamp":"00:49:55.607","source":"Browser","level":"ERROR","message":"Invalid DOM property `%s`. Did you mean `%s`? class className"}
-{"timestamp":"00:49:55.759","source":"Server","level":"ERROR","message":"[browser] \"Invalid DOM property `class`. Did you mean `className`?\" \"\\n    at forEach ([native code])\" \"([native code])\""}
-{"timestamp":"00:49:55.760","source":"Browser","level":"ERROR","message":"Invalid DOM property `class`. Did you mean `className`? \"\\n    at forEach ([native code])\" \"([native code])\""}
-{"timestamp":"00:51:36.966","source":"Server","level":"LOG","message":"✓ Compiled in 88ms"}
-{"timestamp":"00:52:27.465","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:54:02.474","source":"Server","level":"LOG","message":"✓ Compiled in 54ms"}
-{"timestamp":"01:03:52.017","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
-{"timestamp":"01:04:45.659","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
-{"timestamp":"01:10:48.628","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
-{"timestamp":"01:11:02.010","source":"Server","level":"LOG","message":"✓ Compiled in 10ms"}
-{"timestamp":"01:12:32.140","source":"Server","level":"LOG","message":"✓ Compiled in 42ms"}
-{"timestamp":"01:12:45.827","source":"Server","level":"LOG","message":"✓ Compiled in 27ms"}
-{"timestamp":"01:13:54.615","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
-{"timestamp":"01:17:23.370","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}
-{"timestamp":"01:18:36.443","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:01.935","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:02.004","source":"Server","level":"ERROR","message":"[browser] \"Invalid DOM property `class`. Did you mean `className`?\" \"\\n    at Set.forEach (<anonymous>)\" \"(<anonymous>)\""}
+{"timestamp":"00:00:02.004","source":"Browser","level":"ERROR","message":"Invalid DOM property `class`. Did you mean `className`? \"\\n    at Set.forEach (<anonymous>)\" \"(<anonymous>)\""}
+{"timestamp":"00:00:02.648","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:02.951","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}

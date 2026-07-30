@@ -1,22 +1,31 @@
-import { PrismaClient } from "@prisma/client";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+"use client";
 
-// Revalidate page dynamically to get fresh data
-export const dynamic = "force-dynamic";
+import { useEffect, useState } from "react";
 
-const adapter = new PrismaBetterSqlite3({ url: "file:./dev.db" });
-const prisma = new PrismaClient({ adapter });
+export default function Dashboard() {
+  const [guests, setGuests] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-export default async function Dashboard() {
-  const guests = await prisma.guest.findMany({
-    orderBy: {
-      createdAt: 'desc'
-    }
-  });
+  useEffect(() => {
+    fetch('/api/dashboard.php')
+      .then(res => res.json())
+      .then(data => {
+        if(data.success) {
+          setGuests(data.guests);
+        }
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
 
   const totalRsvps = guests.length;
-  const totalCompanions = guests.reduce((sum, guest) => sum + guest.companions, 0);
+  const totalCompanions = guests.reduce((sum, guest) => sum + parseInt(guest.companions || 0), 0);
   const totalGuests = totalRsvps + totalCompanions;
+
+  if (loading) return <main style={{ padding: "3rem", textAlign: "center", fontFamily: "var(--font-serif)", fontSize: "1.5rem" }}>Loading dashboard...</main>;
 
   return (
     <main style={{ padding: "3rem 2rem", maxWidth: "1200px", margin: "0 auto" }}>
